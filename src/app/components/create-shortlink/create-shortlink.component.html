@@ -1,1 +1,21 @@
-<p>create-shortlink works!</p>
+<div class="create-shortlink-container mt-10 flex flex-col items-center mx-auto">
+  <div class="create-shortlink-form ">
+    <form (ngSubmit)="saveUrl(form)" #form="ngForm">
+      <label for="url">Introduce la URL</label>
+
+      <input type="url" 
+             name="urlInput" 
+             id="urlInput" 
+             ngModel
+             #urlInput = "ngModel"
+             required
+             placeholder="https://www.ejemplo.com" /><br />
+
+      <button type="submit" [disabled]="form.invalid" class="btn btn-outline-primary">Shortlink</button>
+    </form>
+  </div>
+  <div>
+    <a href="{{shortlink}}" target="_blank">{{shortlink}}</a>
+    <p class="create-sl-error"> {{error}} </p>
+  </div>
+</div>

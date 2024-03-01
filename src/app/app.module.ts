@@ -9,12 +9,16 @@ import { CreateShortlinkComponent } from './components/create-shortlink/create-s
 import { ShowShortlinkComponent } from './components/show-shortlink/show-shortlink.component';
 import { ShortlinkNotFoundComponent } from './components/shortlink-not-found/shortlink-not-found.component';
 
+import { DataShortlinkService } from './services/datashortlink.service';
+import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
+
 @NgModule({
   declarations: [
     AppComponent,
     CreateShortlinkComponent,
     ShowShortlinkComponent,
-    ShortlinkNotFoundComponent
+    ShortlinkNotFoundComponent,
+    PageNotFoundComponent
   ],
   imports: [
     BrowserModule,
@@ -22,7 +26,9 @@ import { ShortlinkNotFoundComponent } from './components/shortlink-not-found/sho
     FormsModule,
     HttpClientModule
   ],
-  providers: [],
+  providers: [
+    DataShortlinkService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
