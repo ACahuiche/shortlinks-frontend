@@ -11,6 +11,8 @@ import { RedirectComponent } from './redirect/redirect.component';
 import { NotFoundComponent } from './not-found/not-found.component';
 import { NotExistComponent } from './not-exist/not-exist.component';
 
+import { DataShortlinkService } from './services/datashortlink.service';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -26,7 +28,9 @@ import { NotExistComponent } from './not-exist/not-exist.component';
     FormsModule,
     AppRoutingModule
   ],
-  providers: [],
+  providers: [
+    DataShortlinkService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
