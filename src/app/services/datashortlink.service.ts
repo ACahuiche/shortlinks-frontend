@@ -3,7 +3,6 @@ import { HttpClient } from "@angular/common/http";
 import { Observable } from "rxjs";
 import { environment } from "src/environments/environment";
 
-// Suggested code may be subject to a license. Learn more: ~LicenseLog:3106212140.
 @Injectable({
   providedIn: "root"
 })
