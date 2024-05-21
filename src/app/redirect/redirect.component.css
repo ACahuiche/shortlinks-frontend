@@ -1,0 +1,13 @@
+.redirect-main {
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.title{
+    flex-basis: auto;
+    color: white;
+    font-style: normal;
+    font-size: larger;
+    font-weight: 600;
+}
