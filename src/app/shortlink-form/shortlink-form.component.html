@@ -4,11 +4,32 @@
   </div>
 
   <div class="shortlink-form">
-    <input type="url" [(ngModel)]="url" placeholder="http://tu-url-completa.com">
-  </div>
 
-  <div class="boton-acortar">
-    <button>Acortar</button>
-  </div>
+    <form (ngSubmit)="saveUrl(form)" #form="ngForm">
+      <input 
+        type="url"
+        name="urlInput"
+        id="urlInput"
+        ngModel
+        #urlInput="ngModel"
+        required
+        placeholder="http://tu-url-completa.com">
 
+      <div class="boton-acortar">
+        <button
+          type="submit"
+          [disabled]="form.invalid">
+          Acortar
+        </button>
+      </div>
+    </form>
+
+    
+</div>
+
+<div class="shortlink-result-main">
+  <div class="result-shortlink">
+    <input type="url" [(ngModel)]="shortlink" disabled>
+    <button>Copiar URL</button>
+  </div>
 </div>
